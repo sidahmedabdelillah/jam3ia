@@ -23,7 +23,7 @@
                                 d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
 
-                        {{ $student->commun->name . ' ' . $student->commun->wilaya->name }}
+                        {{ $student->commun ? $student->commun->name . ' ' . $student->commun->wilaya->name : '' }}
                     </li>
                     <li class="flex items-center text-sm font-medium">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" id="globe"

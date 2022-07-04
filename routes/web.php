@@ -15,10 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/student/1');
 });
 
-Route::view('/a' ,'student/select-example' );
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -26,9 +25,17 @@ Route::group(['middleware' => 'auth'], function () {
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('/student/{id}' ,[StudentController::class , 'studentProfile'])->name('student_profile');
-    Route::get('/student/edit/{id}' ,[StudentController::class , 'studentEditProfile'])->name('edit_student');
-    Route::post('/student/edit/{id}' ,[StudentController::class , 'studentPutProfile'])->name('put_student');
+    Route::group(['prefix' => 'student'], function(){
+        Route::get('/' ,[StudentController::class, 'studentsTable'])->name('student_table');
+        Route::get('/add' ,[StudentController::class, 'studentAddView'])->name('student_add_view');
+        Route::post('/' ,[StudentController::class, 'studentAdd'])->name('student_add');
+        Route::get('/{id}' ,[StudentController::class, 'studentProfile'])->name('student_profile');
+        Route::delete('/{id' , [StudentController::class , 'delelteStudent'])->name('delete_student');
+        Route::get('/edit/{id}' ,[StudentController::class, 'studentEditProfile'])->name('edit_student');
+        Route::post('/edit/{id}' ,[StudentController::class, 'studentPutProfile'])->name('put_student');
+
+    });
+
 
 });
 

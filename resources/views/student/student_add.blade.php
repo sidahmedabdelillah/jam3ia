@@ -3,7 +3,7 @@
 
     <div class="py-12">
         <div class=" grid  px-28">
-            <h1 class="font-bold text-xl"> تعديل ملف الطفل </h1>
+            <h1 class="font-bold text-xl"> اضافة ملف الطفل </h1>
             @if ($errors->any())
                 <div class="alert alert-danger">
                     <ul>
@@ -28,7 +28,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->family_name }}" name="family_name" required>
+                                 name="family_name" required>
                         </div>
 
                         <div>
@@ -38,7 +38,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                value="{{ $student->first_name }}" name="first_name" required>
+                                 name="first_name" required>
                         </div>
 
                         {{-- row2 --}}
@@ -49,7 +49,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->address }}" name="address" required>
+                                 name="address" required>
                         </div>
 
                         <div>
@@ -59,7 +59,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                value="{{ $student->email }}" name="email" required>
+                                name="email" required>
                         </div>
 
                         {{-- row3 --}}
@@ -70,7 +70,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->parent }}" name="parent" required>
+                                 name="parent" required>
                         </div>
 
                         <div>
@@ -80,7 +80,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                value="{{ $student->num_parent }}" name="num_parent" required>
+                                 name="num_parent" required>
                         </div>
 
                         {{-- row4 --}}
@@ -91,7 +91,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->parent_email }}" name="parent_email" required>
+                                 name="parent_email" required>
                         </div>
 
                         <div>
@@ -114,7 +114,7 @@
 
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->scolaire }}" name="scolaire" required>
+                                 name="scolaire" required>
                         </div>
 
                         <div>
@@ -125,7 +125,7 @@
 
                                 <input   type="date"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5 "
-                                    value="{{ $student->birth_day }}"  name="birth_day">
+                                      name="birth_day">
                                 <div>
                                     <x-commune-select name="commune_id" />
                                 </div>
@@ -138,7 +138,7 @@
                             </dt>
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-4/5 p-2.5"
-                                value="{{ $student->quran }}" name="quran" type="number" required>
+                                 name="quran" type="number" required>
                         </div>
 
                         <div>
@@ -147,7 +147,7 @@
                             </dt>
                             <input type="text" id="last_name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                value="{{ $student->sonna }}" name="sonna" required>
+                                 name="sonna" required>
                         </div>
 
                         <div>
@@ -155,7 +155,7 @@
                                 الهوايات
                             </dt>
                             <textarea id="discription" rows="4" name="hobies"
-                                class="mt-4 block p-2.5 w-4/5  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 ">{{ $student->hobies }}</textarea>
+                                class="mt-4 block p-2.5 w-4/5  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "></textarea>
                         </div>
 
                         <div>
@@ -164,7 +164,7 @@
                             </dt>
                             <textarea id="discription" rows="4"
                                 class="mt-4 block p-2.5 w-full  text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                                name="skills">{{ $student->skills }}</textarea>
+                                name="skills"></textarea>
                         </div>
 
                         <div class="col-span-2 mt-2">
@@ -173,7 +173,7 @@
                             </dt>
                             <textarea id="discription" rows="4"
                                 class="mt-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                                name="health">{{ $student->health }}</textarea>
+                                name="health"></textarea>
                         </div>
                         <div class="col-span-2 mt-2">
 
@@ -182,7 +182,7 @@
                             </h5>
                             <textarea id="discription" rows="4"
                                 class="mt-4 block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 "
-                                name="discription">{{ $student->discription }}</textarea>
+                                name="discription"></textarea>
                         </div>
                         <button type=" "
                             class="submit col-span-2 mt-4 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>

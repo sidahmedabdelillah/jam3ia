@@ -25,7 +25,7 @@
                 }
             },
         }">
-    <input x-model="selected.id" name="{{ $name }}" hidden >
+    <input x-model="selected.id" name="{{ $name }}" hidden required >
     <div class="bg-white rounded-md p-1 flex gap-1 flex-wrap" @click="$refs.search_input.focus()"
          @click.outside="showSelector=false">
             <div x-show="selected.name" class="bg-blue-200 rounded-md flex items-center w-1/2">
